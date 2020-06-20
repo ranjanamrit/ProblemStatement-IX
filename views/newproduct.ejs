@@ -1,0 +1,19 @@
+<%- include ('./partials/header') %> 
+<div id="addaddress">
+  <form id="form" action="/products" method="POST">
+                <div class="address">
+                    <h3> New product</h3>
+                    <label for="title"><i class="fa fa-user"></i> Product Name</label>
+                    <input type="text" id="fname" name=product[title] placeholder="Product Name">
+                    <label for="image"><i class="fa fa-address-card-o"></i> Image Link</label>
+                    <input type="text" id="adr" name="product[image]" placeholder="Image Link">
+                    <label for="desciption"><i class="fa fa-institution"></i> Desciption</label>
+                    <input type="text" id="city" name="product[description]" placeholder="Description">
+                    <button type="submit" value="Add Product" class="btn btn-success button"> Add Product</button>
+                    <a href="/products" class="btn btn-primary button">Product List</a>
+                </div>  
+  </form>
+</div>
+
+<%- include ('./partials/footer')%> 
+<!-- <script type="text/javascript" src="/javascripts/custom.js"></script> -->

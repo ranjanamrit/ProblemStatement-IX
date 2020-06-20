@@ -1,0 +1,25 @@
+<%- include ('./partials/header')%> 
+<div class="container"> 
+    <h2 ><strong>Product List</strong></h2>
+    <div class="card-group">
+        <div class="d-flex justify-content-around flex-wrap">
+    <% product.forEach(product => { %>
+        <div class="card mb-3 mr-1" style="justify-content: center;">
+        <img class="card-img-top" src="<%= product.image%> " style="width: 100%; height: 16rem;">
+        <div class="card-body">
+        <h4 class="card-title"><%=product.title%></h4>
+        <p class="card-text id"><strong>Product ID</strong>:<%= product._id %> </p>
+        <p class="card-text"><%= product.description %> </p>
+        <a  href="/products/<%= product._id %>/edit "><img id="edit" src="https://img.icons8.com/cute-clipart/30/000000/edit-property.png"/></a>
+        <form id="delete" action="/products/<%=product._id%>?_method=DELETE" method="post">
+            <button class="btn"><img src="https://img.icons8.com/cute-clipart/30/000000/delete-forever.png"/></button>
+        </form>
+        </div>
+        </div>
+    <% }) %>
+        </div>
+</div>
+</div>
+
+
+<%- include ('./partials/footer')%> 
